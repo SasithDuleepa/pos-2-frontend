@@ -1,0 +1,137 @@
+
+.bill-parent{
+    display: grid;
+grid-template-columns: repeat(7, 1fr);
+grid-template-rows: repeat(6, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+height: 100vh;
+}
+.bill-child-1{
+    grid-area: 1 / 1 / 3 / 8;
+    background-color: var(--secondary-color);
+}
+.bill-child-2{
+    grid-area: 3 / 6 / 7 / 8;
+    background-color: var(--secondary-color);
+}
+.bill-child-3{
+    grid-area: 3 / 1 / 7 / 6;
+    background-color: yellow;
+}
+
+
+.sale-h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: center;
+}
+.sale-input-div-container-1{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin-top: 30px;
+}
+.sale-input-div{
+    width: 340px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sale-input-div-container-2{
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    /* width: 831px; */
+    margin-top: 20px;
+}
+.sale-input-label{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.sale-input{
+    width: 250px;
+    height: 30px;
+}
+
+.sale-bill-add-btn{
+
+  align-items: center;
+  background-color: #eda3a3;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 1px 70px;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .1s,-webkit-box-shadow .1s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+}
+
+.sale-bill-add-btn:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sale-bill-div{
+    margin-top: 50px
+}
+.sale-bill-enter-btn{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border: 1px solid black;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+.sale-bill-total-sub-div{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 10px;
+}
+
+.sale-line{
+    border-bottom: 2px solid var(--text-color);
+    margin: 20px 5px;
+    color: var(--text-color);
+}
+.sale-bill-label{
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.sale-bill-values{
+    font-size: 20px;
+    color: var(--text-color);
+}
