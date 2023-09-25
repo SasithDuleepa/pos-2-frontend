@@ -5,6 +5,8 @@ import './App.css';
 
 import Sidebar from './components/sidebar/sidebar';
 import Supplier from './pages/supplier/supplier';
+import Customer from './pages/customer/customer';
+import Stock from './pages/stock/stock';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/supplier" component={Supplier}/>
+          <Route exact path="/customer" component={Customer}/>
+          <Route exact path="/stock" component={Stock}/>
         </Switch>
       </Router>
       

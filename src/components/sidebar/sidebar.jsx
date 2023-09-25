@@ -10,9 +10,9 @@ export default function Sidebar() {
       <div className='sidebar-link-div'>
         <a className='sidebar-link-dashboad'>Dashboad</a>
         <a className='sidebar-link-dashboad'>Sale</a>
-        <a className='sidebar-link-dashboad'>Stock</a>
+        <a className='sidebar-link-dashboad' href='/stock'>Stock</a>
         <a className='sidebar-link-dashboad' href='/supplier'>Supplier</a>
-        <a className='sidebar-link-dashboad'>Customer</a>
+        <a className='sidebar-link-dashboad' href='/customer'>Customer</a>
 
 
       </div>
