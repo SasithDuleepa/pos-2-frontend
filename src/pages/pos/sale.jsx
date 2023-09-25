@@ -26,7 +26,7 @@ export default function Sale() {
               <input className='sale-input' type='text' />
             </div>
             <div  className='sale-input-div'>
-              <label className='sale-input-label'>quentity</label>
+              <label className='sale-input-label'>qty</label>
               <input className='sale-input' type='text' />
             </div>
             <div  className='sale-input-div'>
@@ -57,7 +57,23 @@ export default function Sale() {
           </div>
 
         </div>
-        <div className='bill-child-3'></div>
+        <div className='bill-child-3'>
+          <div className='bill-head-div'>
+            <p className='bill-item'>item</p>
+            <p className='bill-qty'>qty</p>
+            <p className='bill-price'>price</p>
+            <p className='bill-total'>total</p>
+            <p className='bill-option'>option</p>
+          </div>
+
+          <div className='bill-head-div-values'>
+            <p className='bill-item-values'>item</p>
+            <p className='bill-qty-values'>qty</p>
+            <p className='bill-price-values'>price</p>
+            <p className='bill-total-values'>total</p>
+            <p className='bill-option-values'>option</p>
+          </div>
+        </div>
     </div>
   )
 }
