@@ -13,6 +13,7 @@ height: 100vh;
 }
 .customer-child-2{
     grid-area: 2 / 1 / 3 / 2;
+   
 }
 
 
@@ -92,4 +93,158 @@ height: 100vh;
     border-color: #0d6efd;
 }
 
+.customer-update-button{
+    cursor: pointer;
+    outline: 0;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 10px 24px;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
+    color: var(--text-color);
+    background-color: var(--main-color);
+    border-color:white;
 
+}
+.customer-update-button:hover {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+.deactive{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.customer-view-div{
+    margin: 5px;
+    background-color: #fff;
+    width: 99%;
+    height: 97%;
+}
+.customer-view-div-header{
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.customer-name{
+    width: 250px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.customer-address{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.customer-contact{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.customer-email{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.customer-nic{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.customer-action{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.customer-view-div-value{
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: aliceblue;
+    -webkit-box-shadow: 1px 3px 13px -7px rgba(0,0,0,1);
+-moz-box-shadow: 1px 3px 13px -7px rgba(0,0,0,1);
+box-shadow: 1px 3px 13px -7px rgba(0,0,0,1);
+}
+
+.customer-name-value{
+    width: 250px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.customer-address-value{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.customer-contact-value{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.customer-email-value{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.customer-nic-value{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.customer-action-value{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.edite-img{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+.delete-img{
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    margin-right: 10px;
+}

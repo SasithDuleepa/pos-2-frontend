@@ -63,7 +63,7 @@ height: 100vh;
 .sale-bill-add-btn{
 
   align-items: center;
-  background-color: #eda3a3;
+  background-color:var(--accent-color);
   border-radius: 12px;
   box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
   box-sizing: border-box;
@@ -113,9 +113,10 @@ height: 100vh;
     position: fixed;
     bottom: 30px;
     right: 30px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 10px 30px;
     border-radius: 10px;
+    background-color:var(--accent-color);
 }
 
 .sale-bill-total-sub-div{
@@ -154,6 +155,7 @@ height: 100vh;
     justify-content: space-around;
     height: 40px;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 
