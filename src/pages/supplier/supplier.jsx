@@ -27,7 +27,15 @@ export default function Supplier() {
         console.log(res.data)
         if(res.data.status === 200 ){
             alert('Supplier Added Successfully')
-            
+            getAllSuppliers();
+            setData({
+                supplier_id:"",
+                supplier_name:'',
+                supplier_address:'',
+                supplier_contact:'',
+                supplier_email:'',
+                supplier_nic:''
+            })
         }else if(res.data.status === 500){
             alert('Server Error')
         
@@ -133,7 +141,7 @@ export default function Supplier() {
                     <p className='supplier-contact'>contact</p>
                     <p className='supplier-email'>email</p>
                     <p className='supplier-nic'>nic</p>
-                    <p className='supplier-delete'>delete</p>
+                    <p className='supplier-action'>option</p>
                 </div>
                 {suppliers.map((supplier,index) => {
                     return(

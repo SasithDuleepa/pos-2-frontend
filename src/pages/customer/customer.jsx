@@ -27,6 +27,14 @@ export default function Customer() {
         if(res.data.status === 200 ){
             alert('Customer Added Successfully')
             getallcustomers();
+            setdata({
+                customer_id:"",
+                customer_name:'',
+                customer_address:'',
+                customer_contact:'',
+                customer_email:'',
+                customer_nic:''
+            })
         }else if(res.data.status === 400){
             alert('Customer Not Added')
         }else if(res.data.status === 500){
@@ -42,7 +50,7 @@ export default function Customer() {
         const res = await axios.get(`${process.env.REACT_APP_BACKEND_API}/customers/all`)
         console.log(res.data)
         if(res.data.status === 200 ){
-            setcustomers(res.data.data)
+            setcustomers(res.data.data);
         }        
     }
     useEffect(() => {

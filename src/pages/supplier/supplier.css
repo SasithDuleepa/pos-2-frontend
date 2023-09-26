@@ -149,31 +149,31 @@ height: 100vh;
 }
 
 .supplier-name{
-    width: 250px;
+    width: 150px;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
 }
 .supplier-address{
-    width: 100px;
+    width: 250px;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
 }
 .supplier-contact{
-    width: 100px;
+    width: 150px;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
 }
 .supplier-email{
-    width: 100px;
+    width: 150px;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
 }
 .supplier-nic{
-    width: 100px;
+    width: 200px;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
@@ -199,31 +199,31 @@ box-shadow: 1px 3px 13px -7px rgba(0,0,0,1);
 }
 
 .supplier-name-value{
-    width: 250px;
+    width: 150px;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
 }
 .supplier-address-value{
-    width: 100px;
-    font-size: 18px;
+    width: 250px;
+    font-size: 15px;
     font-weight: 500;
     text-align: center;
 }
 .supplier-contact-value{
-    width: 100px;
+    width: 150px;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
 }
 .supplier-email-value{
-    width: 100px;
+    width: 150px;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
 }
 .supplier-nic-value{
-    width: 100px;
+    width: 200px;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
