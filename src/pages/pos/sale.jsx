@@ -11,6 +11,7 @@ export default function Sale() {
     payment_method: 'on cash',
     discount: '10%',
     bill_total: 0,
+    payment_status:'unpaid',
     items: [],
   });
 
@@ -121,6 +122,20 @@ export default function Sale() {
             customer: e.target.value,
         }))
     }
+
+    //send data
+    const Senddata =async () => {
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_API}/bills/add`,billData)
+      console.log(res.data)
+      if(res.data.status === 200 ){
+          alert('Bill Added Successfully')
+          window.location.reload();
+    }else if(res.data.status === 500){
+        alert('Internal  Server Error')
+    }else{
+      alert('Bill Not Added')
+  }
+  }
   return (
     <div className='bill-parent'>
       <div className='bill-child-1'>
@@ -187,7 +202,7 @@ export default function Sale() {
               <p className='sale-bill-values'>{billData.bill_total}</p>
             </div>
           </div>
-          <button className='sale-bill-enter-btn'>Enter</button>
+          <button className='sale-bill-enter-btn' onClick={Senddata}>Enter</button>
         </div>
       </div>
       <div className='bill-child-3'>

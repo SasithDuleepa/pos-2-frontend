@@ -13,6 +13,8 @@ export default function Sidebar() {
         <a className='sidebar-link-dashboad' href='/stock'>Stock</a>
         <a className='sidebar-link-dashboad' href='/supplier'>Supplier</a>
         <a className='sidebar-link-dashboad' href='/customer'>Customer</a>
+        <a className='sidebar-link-dashboad' href='/bills'>Bills</a>
+        <a className='sidebar-link-dashboad' href='/bills'>E-Mail</a>
 
 
       </div>

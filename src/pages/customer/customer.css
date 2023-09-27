@@ -46,8 +46,8 @@ height: 100vh;
     margin: 5px 1px;
 }
 .customer-form-label{
-    font-size: 18px;
     margin: 2px 5px;
+    font-size: 18px;    
     color: var(--text-color);
     font-weight: 500;
 }

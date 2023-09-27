@@ -8,6 +8,7 @@ import Supplier from './pages/supplier/supplier';
 import Customer from './pages/customer/customer';
 import Stock from './pages/stock/stock';
 import Sale from './pages/pos/sale';
+import Bills from './pages/bills/bills';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/customer" component={Customer}/>
           <Route exact path="/stock" component={Stock}/>
           <Route exact path="/sale" component={Sale}/>
+          <Route exact path="/bills" component={Bills}/>
         </Switch>
       </Router>
       
