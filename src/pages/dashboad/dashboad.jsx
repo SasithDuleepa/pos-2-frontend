@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './dashboad.css';
 
 export default function Dashboad() {
   return (
