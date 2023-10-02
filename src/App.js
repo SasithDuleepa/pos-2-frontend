@@ -9,6 +9,8 @@ import Customer from './pages/customer/customer';
 import Stock from './pages/stock/stock';
 import Sale from './pages/pos/sale';
 import Bills from './pages/bills/bills';
+import Email from './pages/email/email';
+import Dashboad from './pages/dashboad/dashboad';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route exact path="/stock" component={Stock}/>
           <Route exact path="/sale" component={Sale}/>
           <Route exact path="/bills" component={Bills}/>
+          <Route exact path="/email" component={Email}/>
+          <Route exact path="/dashboad" component={Dashboad}/>
         </Switch>
       </Router>
       

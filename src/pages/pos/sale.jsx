@@ -17,6 +17,32 @@ export default function Sale() {
 
   const [itemName, setItemName] = useState('');
   const [qty, setQty] = useState();
+  let SelectedItem = null;
+
+
+  //get items acc to input
+  const[item_name, setItem_name] = useState('')
+    const[itemlist,setItemlst] = useState([])
+
+    const itemSearchHandler = async(e) =>{
+    let item= null;
+    item = e.target.value;
+    console.log(e.target.value)
+    setItem_name(e.target.value)
+
+    const res = await axios.get(`${process.env.REACT_APP_BACKEND_API}/stock/itemacctoname/?item=${item}`);
+    console.log(res.data.data)
+    setItemlst(res.data.data)
+  }
+  const SelectItems = (e) =>{
+    console.log(e)
+    setItemName(e)
+    setItem_name(e)
+    setItemlst([])
+  
+  
+  }
+
 
   const [items, setItems] = useState([]);
   useEffect(() => {
@@ -30,10 +56,6 @@ export default function Sale() {
     };
     getItems();
   }, []);
-
-  const itemSelectHandler = (e) => {
-    setItemName(e.target.value);
-  };
 
   const qtyHandler = (e) => {
     setQty(e.target.value);
@@ -60,7 +82,7 @@ export default function Sale() {
       }));
 
       
-
+      setItem_name('')
       setItemName('');
       setQty(0);
       
@@ -89,6 +111,8 @@ export default function Sale() {
       const bill_idHandler = (e) => {
           const timestamp = new Date().getTime().toString(36);
           const randomPortion = Math.random().toString(36).substr(2, 5); 
+
+          
 
           setBillData((prevData) => ({
               ...prevData,
@@ -127,6 +151,7 @@ export default function Sale() {
     const Senddata =async () => {
       const res = await axios.post(`${process.env.REACT_APP_BACKEND_API}/bills/add`,billData)
       console.log(res.data)
+      
       if(res.data.status === 200 ){
           alert('Bill Added Successfully')
           window.location.reload();
@@ -163,17 +188,33 @@ export default function Sale() {
           </div>
         </div>
         <div className='sale-input-div-container-2'>
-          <div className='sale-input-div'>
-            <label className='sale-input-label'>item</label>
-            <select className='sale-input' onChange={(e) => itemSelectHandler(e)}>
+         
+          <div className='sale-input-div-item'>
+            <div className='sale-input-item-name-label-div'>
+              <label className='sale-input-label'>item</label>
+              <input className='sale-input' type='text'  onChange={(e) => itemSearchHandler(e)} value={item_name}/>
+            </div>
+            
+            <div className='sale-input-item-result-div'>
+            {itemlist.map((item, index) => (
+                <div key={index} className='sale-item-list'>
+                <li><a onClick={(e)=>SelectItems(item.stock_item)} value={item.stock_item}>{item.stock_item}</a></li>
+                </div>
+            ))}
+            </div>
+            
+            {/* <select className='sale-input' onChange={(e) => itemSelectHandler(e)}>
               <option value=''>Select an item</option>
               {items.map((item, index) => (
                 <option key={index} value={item.stock_item}>
                   {item.stock_item}-{item.current_qty}
                 </option>
               ))}
-            </select>
+            </select> */}
+       
+
           </div>
+          
           <div className='sale-input-div'>
             <label className='sale-input-label'>qty</label>
             <input className='sale-input' value={qty} onChange={(e) => qtyHandler(e)} type='number' />

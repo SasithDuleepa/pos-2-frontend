@@ -37,9 +37,33 @@ height: 100vh;
     width: 340px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    
 }
 
+.sale-input-item-name-label-div{
+    display: flex;
+
+}
+
+.sale-input-div-item{
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px
+    
+}
+.sale-input-item-result-div{
+    background-color: aliceblue;
+    z-index: 1;
+    width: 250px;
+    margin-left: 100px;
+    max-height: 100px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    
+}
 .sale-input-div-container-2{
     display: flex;
     padding: 10px 20px;
@@ -87,6 +111,7 @@ height: 100vh;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  max-height: 3rem;
 
 }
 
