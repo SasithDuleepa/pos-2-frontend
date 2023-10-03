@@ -106,3 +106,65 @@ box-shadow: 1px 3px 13px -7px rgba(0,0,0,1);
     font-weight: 500;
     text-align: center;
 }
+.no-bills-p{
+    text-align: center;
+}
+
+
+
+
+
+
+.send-mail-btn{
+    cursor: pointer;
+    outline: 0;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 10px 24px;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
+    color: var(--text-color);
+    background-color: var(--main-color);
+    border-color:white;
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+
+}
+.send-mail-btn:hover {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+.bill-search-btn{
+    cursor: pointer;
+    outline: 0;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 8px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
+    color: var(--text-color);
+    background-color: var(--main-color);
+}
+.bill-search-btn:hover {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}

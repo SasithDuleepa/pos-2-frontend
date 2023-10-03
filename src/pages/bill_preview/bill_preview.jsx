@@ -6,6 +6,35 @@ export default function Bill_preview() {
 
 
   return (
-    <div>Bill_preview kuyyfgh kgjjjjjhhhhhhhj<p>{id}</p></div>
+    <div>
+      <p>{id}</p>
+      <div>
+        <div>
+          <label>bill customer</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label>bill date</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label>payment method</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label>bill discount</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label>bill total</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label>payment status</label>
+          <input type="text" />
+        </div>
+
+      </div>
+    </div>
   )
 }

@@ -29,7 +29,7 @@ export default function Email() {
 
   const searchHandler = async () => {
     const res = await axios.get(
-      `${process.env.REACT_APP_BACKEND_API}/bills/billaccid/?start_date=${date_start}&end_date=${date_end}`
+      `${process.env.REACT_APP_BACKEND_API}/bills/billaccdaterangeunpaid/?start_date=${date_start}&end_date=${date_end}`
     );
     console.log(res.data);
     if (res.data.status === 200) {
@@ -72,7 +72,7 @@ export default function Email() {
               />
             </div>
             <div>
-              <button onClick={searchHandler}>Search</button>
+              <button className='bill-search-btn' onClick={searchHandler}>Search</button>
             </div>
           </div>
         </div>
@@ -121,12 +121,12 @@ export default function Email() {
             ))
           ) : (
             <div className="Email-view-div">
-              <p>No bills found</p>
+              <p className='no-bills-p'>No bills found</p>
             </div>
           )}
 
           <div>
-            <button onClick={handleBulkAction}>Send mail</button>
+            <button className='send-mail-btn' onClick={handleBulkAction}>Send mail</button>
           </div>
         </div>
       </div>
