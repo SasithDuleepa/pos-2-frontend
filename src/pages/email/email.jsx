@@ -37,6 +37,13 @@ export default function Email() {
     }
   };
 
+  //bill id search
+  const searchHandler2 = async (e) => {
+    const res = await axios.get( `${process.env.REACT_APP_BACKEND_API}/bills/billaccidunpaid/?id=${e.target.value}`);
+    console.log(res.data);
+    setBills(res.data.data)
+  }
+
   function formatDate(inputDate) {
     const originalDate = new Date(inputDate);
     const modifiedDate = new Date(originalDate);
@@ -79,7 +86,7 @@ export default function Email() {
 
         <div className="Email-id-div">
           <label className="Email-input-label">bill id</label>
-          <input type="text" className="Email-input" />
+          <input type="text" className="Email-input" onChange={(e) => searchHandler2(e)}/>
         </div>
       </div>
       <div className="Email-div2">

@@ -1,0 +1,164 @@
+.parent-bill-preview {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100vh;
+    }
+    
+    .div1-bill-preview { 
+        grid-area: 1 / 1 / 3 / 2;
+        background-color:var(--primary-color);
+     }
+    .div2-bill-preview { 
+        grid-area: 3 / 1 / 7 / 2;
+     }
+
+
+
+     .bill-priview-out-div{
+        border: 2px solid rgb(255, 255, 255);
+        margin: 10px 20px;
+        padding: 5px 10px;
+        border-radius: 10px;
+     }
+     .bill-preview-header{
+        font-size: 30px;
+    font-weight: 700;
+    color: var(--text-color) ;
+    text-align: center;
+     }
+
+     .bill-payment-preview-main-div{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+     }
+
+     .bill-preview-details-div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 300px;
+        margin: 10px 50px;
+        background-color: rgba(240, 248, 255, 0.059);
+        padding: 2px 5px;
+        border-radius: 5px;
+     }
+     .bill-preview-details-label{
+        font-size: 22px;
+    font-weight: 500;
+    color: var(--text-color) ;
+    text-align: center;
+    
+     }
+     .bill-preview-details-p{
+        font-size: 20px;
+    font-weight: 400;
+    color: var(--text-color) ;
+    text-align: center;
+    
+     }
+
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+.bill-preview-items-head-div{
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.bill-preview-items-item{
+    width: 250px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.bill-preview-items-itemprice{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.bill-preview-items-qty{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.bill-preview-items-price{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.bill-preview-items-total{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.bill-preview-items-head-div-details{
+    display: flex;
+    justify-content: space-around;
+    height: 43px;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: aliceblue;
+    -webkit-box-shadow: 1px 3px 13px -7px rgba(0,0,0,1);
+-moz-box-shadow: 1px 3px 13px -7px rgba(0,0,0,1);
+box-shadow: 1px 3px 13px -7px rgba(0,0,0,1);
+}
+
+
+.bill-preview-items-item-details{
+    width: 250px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.bill-preview-items-itemprice-details{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.bill-preview-items-qty-details{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.bill-preview-items-price-details{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.bill-preview-items-total-details{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
