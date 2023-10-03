@@ -5,7 +5,8 @@ import Details_bar from '../../components/dashboad components/details_bar/detail
 
 export default function Dashboad() {
   return (
-    <div>
+    <div className='dashboad'>
+      <h1 className='dashboad-title'>Dashboad</h1>
       <Details_bar/>
     </div>
   )

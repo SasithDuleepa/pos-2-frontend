@@ -1,0 +1,12 @@
+
+.dashboad{
+    background-color: var(--secondary-color);
+    height: 100vh;
+}
+
+.dashboad-title{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text-color) ;
+    text-align: center;
+}

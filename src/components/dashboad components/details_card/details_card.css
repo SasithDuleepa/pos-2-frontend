@@ -1,12 +1,13 @@
 
 .details_card{
-    background-color: aqua;
+    background-color: var(--main-color);
     height: 160px;
     width: 300px;
     margin: 10px 5px;
     border-radius: 10px;
     padding: 5px 10px;
     display: flex;
+    border: 1px solid var(--text-color);
 }
 
 .details_card_title-div{
@@ -29,6 +30,7 @@
     text-align: right;
     font-size: 30px;
     font-weight: 600;
+    color: var(--text-color);
     
     
 }
@@ -36,4 +38,5 @@
     text-align: center;
     font-size: 35px;
     font-weight: 600;
+    color: var(--text-color);
 }
