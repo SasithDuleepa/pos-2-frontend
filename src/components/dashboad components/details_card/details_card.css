@@ -1,0 +1,39 @@
+
+.details_card{
+    background-color: aqua;
+    height: 160px;
+    width: 300px;
+    margin: 10px 5px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    display: flex;
+}
+
+.details_card_title-div{
+    width: 180px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.details_card_content-div{
+    width: 120px;
+    /* background-color: violet; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.details_card_title{
+    text-align: right;
+    font-size: 30px;
+    font-weight: 600;
+    
+    
+}
+.details_card_content{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+}
