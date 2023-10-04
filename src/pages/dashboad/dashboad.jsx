@@ -9,7 +9,10 @@ export default function Dashboad() {
     <div className='dashboad'>
       <h1 className='dashboad-title'>Dashboad</h1>
       <div><Details_bar/></div>
-      <div><ItemChart/></div>
+      <h2  className='dashboad-title'> Available Items</h2>
+      <div className='dashboad-chart'>
+
+        <ItemChart/></div>
       <div></div>
       <div></div>
       

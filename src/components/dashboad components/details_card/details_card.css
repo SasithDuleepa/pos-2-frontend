@@ -8,6 +8,10 @@
     padding: 5px 10px;
     display: flex;
     border: 1px solid var(--text-color);
+    transition: 0.2s;
+}
+.details_card:hover{
+    background-color:rgba(9, 28, 66, 0.986) ;
 }
 
 .details_card_title-div{

@@ -8,7 +8,7 @@ export default function Details_card(props) {
             <p className='details_card_title'>{props.title}</p>
         </div>
         <div className='details_card_content-div'>
-            <p className='details_card_content'>123</p>
+            <p className='details_card_content'>{props.content}</p>
         
         </div>
     </div>
