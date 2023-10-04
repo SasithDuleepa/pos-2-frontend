@@ -1,7 +1,9 @@
 .details_bar{
     display: flex;
     justify-content: space-around;
-    background-color: var(--accent-color);
-    margin: 10px 20px;
+    /* background-color: var(--accent-color); */
+    background-color: rgba(240, 248, 255, 0.673);
+    margin: 20px 20px;
     border-radius: 10px;
+    padding: 10px ;
 }
