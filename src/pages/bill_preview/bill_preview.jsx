@@ -61,6 +61,26 @@ export default function Bill_preview() {
     }
 
 
+    //paid unpaid
+    const[status,setstatus]= useState()
+    const statushandler = (e) =>{
+      console.log(e.target.value);
+      setstatus(e.target.value)
+
+     
+
+    }
+    //update
+    const Update = async () =>{
+      const res =await axios.put(`${process.env.REACT_APP_BACKEND_API}/bills//billstatusupdate/?id=${id}`,{payment_status:status})
+      console.log(res.data);
+      if(res.data.status===200){
+        alert('payment status updated')
+      }
+    }
+    
+
+
   return (
     <div class="parent-bill-preview">
 <div class="div1-bill-preview">
@@ -86,8 +106,17 @@ export default function Bill_preview() {
       <p className='bill-preview-details-p'>{billdata.payment_method}</p>
     </div>
     <div className='bill-preview-details-div'>
+      <label className='bill-preview-details-label'>Total bill :</label>
+      <p className='bill-preview-details-p'>{billdata.bill_total}</p>
+    </div>
+    <div className='bill-preview-details-div'>
       <label className='bill-preview-details-label'>Payment Status :</label>
-      <p className='bill-preview-details-p'>{billdata.payment_status}</p>
+      {/* <p className='bill-preview-details-p'>{billdata.payment_status}</p> */}
+      <select onChange={(e)=>statushandler(e)}>
+        <option value={billdata.payment_status}>{billdata.payment_status}</option>
+        <option value={'paid'}>paid</option>
+        <option value={'unpaid'}>unpaid</option>
+      </select>
     </div>
   </div>
 
@@ -118,6 +147,8 @@ export default function Bill_preview() {
   </div>
        
    </div>
+
+   <button onClick={Update} className='bill-preview-update-btn'>update</button>
 </div>
 
   )
