@@ -10,13 +10,13 @@ export default function Bill_preview() {
     //const get bill data
 
     const[billdata,setbilldata]= useState({
-      id:"xx",
-      bill_customer:"xx",
-      bill_date:"xx",
-      payment_method:"xx",
-      bill_discount:"xx",
-      bill_total:"xx",
-      payment_status:"xx"
+      id:"",
+      bill_customer:"",
+      bill_date:"",
+      payment_method:"",
+      bill_discount:"",
+      bill_total:"",
+      payment_status:""
     
     })
 

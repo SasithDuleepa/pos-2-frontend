@@ -127,7 +127,7 @@ export default function Email() {
               </div>
             ))
           ) : (
-            <div className="Email-view-div">
+            <div className="Email-view-header-div-value">
               <p className='no-bills-p'>No bills found</p>
             </div>
           )}

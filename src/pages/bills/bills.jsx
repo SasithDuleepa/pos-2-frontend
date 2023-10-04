@@ -48,23 +48,10 @@ export default function Bills() {
                     <input type="date" className='bills-input' onChange={(e)=>setEnd_date(e.target.value)} value={end_date}/>
                 </div>
                 <div>
-                    <button onClick={searchHandler}>Search</button>
+                    <button onClick={searchHandler} className='bills-search-btn'>Search</button>
                 </div>
             </div>
-            <div>
-            <div className='bills-select-div'>
-                <label className='bill-input-label'>paid</label>
-                <input type='checkbox' />
-            </div>
-            <div className='bills-select-div'>
-                <label className='bill-input-label'>unpaid</label>
-                <input type='checkbox' />
-            </div>
-            <div className='bills-select-div'>
-                <label className='bill-input-label'>all</label>
-                <input type='checkbox' />
-            </div>
-            </div>
+
             </div>
             
 
@@ -112,7 +99,7 @@ export default function Bills() {
             </a>
             ))
           ) : (
-            <div className="Email-view-div">
+            <div className="bills-view-header-div-value">
               <p className='no-bills-p'>No bills found</p>
             </div>
           )}

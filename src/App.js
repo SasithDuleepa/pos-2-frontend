@@ -27,7 +27,7 @@ function App() {
           <Route exact path="/sale" component={Sale}/>
           <Route exact path="/bills" component={Bills}/>
           <Route exact path="/email" component={Email}/>
-          <Route exact path="/dashboad" component={Dashboad}/>
+          <Route exact path="/" component={Dashboad}/>
           <Route exact path="/bill_preview/:id" component={Bill_preview}/>
 
         </Switch>

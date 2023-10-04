@@ -3,12 +3,15 @@ import './bill.css';
 import axios from 'axios';
 import Delete from './../../components/icons/delete.png';
 
+import OnCash from './../../components/icons/on_cash.png';
+import OnCredit from './../../components/icons/cashback.png';
+
 export default function Sale() {
   const [billData, setBillData] = useState({
     bill_id: '',
     customer: '',
     date: '',
-    payment_method: 'on cash',
+    payment_method: 'on credite',
     discount: '10%',
     bill_total: 0,
     payment_status:'unpaid',
@@ -147,8 +150,52 @@ export default function Sale() {
         }))
     }
 
+
+    //oncash on credit
+    const[oncashClass, setOncashClass] = useState('sale-bill-img-oncash')
+    const[oncreditClass, setOncreditClass] = useState('sale-bill-img-oncredite')
+    
+    const oncashHandler = (e) => {
+      if(billData.payment_method==='on cash'){
+        setOncashClass('sale-bill-img-oncash-active')
+        setOncreditClass('sale-bill-img-oncredite')
+      }else if(billData.payment_method==='on credite'){
+        setOncashClass('sale-bill-img-oncash')
+        setOncreditClass('sale-bill-img-oncredite-active')
+      }
+    }
+    const Payment_method = (value)=> ()=>{
+      
+      if(value=='on cash'){
+        console.log('method set on cash')
+        
+        setBillData((prevData) => ({
+          ...prevData,
+          payment_method: 'on cash',
+          payment_status:'paid',
+        }))
+        setOncashClass('sale-bill-img-oncash-active')
+        setOncreditClass('sale-bill-img-oncredite')
+      }else if(value=='on credite'){
+        console.log('method set on credite')
+        
+        setBillData((prevData) => ({
+          ...prevData,
+          payment_method: 'on credite',
+          payment_status:'unpaid',
+        }))
+        setOncashClass('sale-bill-img-oncash')
+        setOncreditClass('sale-bill-img-oncredite-active')
+      }
+
+    }
+    
+    useEffect(() => {
+      oncashHandler()
+    },[])
     //send data
     const Senddata =async () => {
+      console.log('send clicked!!')
       const res = await axios.post(`${process.env.REACT_APP_BACKEND_API}/bills/add`,billData)
       console.log(res.data)
       
@@ -231,7 +278,12 @@ export default function Sale() {
           <div className='sale-bill-div'>
             <div className='sale-bill-total-sub-div'>
               <label className='sale-bill-label'>payment method</label>
-              <p className='sale-bill-values'>{billData.payment_method}</p>
+              {/* <p className='sale-bill-values'>{billData.payment_method}</p> */}
+              <div className='sale-bill-payment-method-div'>
+              <a><img className={oncashClass} src={OnCash}  onClick={Payment_method('on cash')}/></a>
+              <a><img className={oncreditClass} src={OnCredit} onClick={Payment_method('on credite')}/></a>
+              </div>
+              
             </div>
             <div className='sale-bill-total-sub-div'>
               <label className='sale-bill-label'>discount</label>
