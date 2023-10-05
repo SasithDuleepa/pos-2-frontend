@@ -140,17 +140,7 @@ export default function Customer() {
                     <p className='customer-nic'>nic</p>
                     <p className='customer-action'>action</p>
                 </div>
-                {/* <div className='customer-view-div-value'>
-                    <p className='customer-name-value'>name</p>
-                    <p className='customer-address-value'>address</p>
-                    <p className='customer-contact-value'>contact</p>
-                    <p className='customer-email-value'>email</p>
-                    <p className='customer-nic-value'>nic</p>
-                    <div className='customer-action-value'>
-                        <img className='edite-img' src={Edite} alt="" />
-                        <img className='delete-img' src={Delete} alt="" />
-                    </div>
-                </div> */}
+                <div className='customer-view-container'>
                 {customers.map((customer,index) => {
                     return(
                         <div className='customer-view-div-value' key={index}>
@@ -175,6 +165,9 @@ export default function Customer() {
                     )
                 }
                 )}
+                </div>
+
+                
             </div>
         </div>
     </div>

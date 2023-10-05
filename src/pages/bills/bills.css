@@ -13,7 +13,11 @@ grid-row-gap: 0px;
         
      }
     .bills-div2 { grid-area: 3 / 1 / 7 / 2; }
+.bills-view-container{
 
+    height: 63vh;
+    overflow-y: scroll;
+}
 
 
 .bills-h1{

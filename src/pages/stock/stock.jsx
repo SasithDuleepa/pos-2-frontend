@@ -167,6 +167,7 @@ export default function Stock() {
                 <p className='stock-action'>action</p>
             </div>
 
+            <div className='stock-view-div-container'>
             {stock.map((stock,index) => {
                 return(
                     <div className='stock-view-div-value' key={index}>
@@ -195,6 +196,9 @@ export default function Stock() {
             
             }
             )}
+            </div>
+
+
         </div>
     </div>
 </div>

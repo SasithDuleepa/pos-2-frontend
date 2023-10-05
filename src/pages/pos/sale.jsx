@@ -12,8 +12,9 @@ export default function Sale() {
     customer: '',
     date: '',
     payment_method: 'on credite',
-    discount: '10%',
+    discount: 0,
     bill_total: 0,
+    net_total: 0,
     payment_status:'unpaid',
     items: [],
   });
@@ -105,6 +106,7 @@ export default function Sale() {
       ...prevData,
       items: updatedItems,
       bill_total: updatedTotal,
+      net_total: prevData.bill_total - (prevData.bill_total * (prevData.discount / 100)),
     }));
   }
 
@@ -166,7 +168,7 @@ export default function Sale() {
     }
     const Payment_method = (value)=> ()=>{
       
-      if(value=='on cash'){
+      if(value==='on cash'){
         console.log('method set on cash')
         
         setBillData((prevData) => ({
@@ -176,7 +178,7 @@ export default function Sale() {
         }))
         setOncashClass('sale-bill-img-oncash-active')
         setOncreditClass('sale-bill-img-oncredite')
-      }else if(value=='on credite'){
+      }else if(value==='on credite'){
         console.log('method set on credite')
         
         setBillData((prevData) => ({
@@ -192,7 +194,22 @@ export default function Sale() {
     
     useEffect(() => {
       oncashHandler()
+      setBillData((prevData) => ({
+        ...prevData,
+        net_total: prevData.bill_total - (prevData.bill_total * (prevData.discount / 100)),
+    }
+    ))
     },[])
+
+    //discount
+    const discountHandler = (e) => {
+      setBillData((prevData) => ({
+        ...prevData,
+        discount: e.target.value,
+        net_total: prevData.bill_total - (prevData.bill_total * (prevData.discount / 100)),
+    }
+    ))
+    }
     //send data
     const Senddata =async () => {
       console.log('send clicked!!')
@@ -287,12 +304,18 @@ export default function Sale() {
             </div>
             <div className='sale-bill-total-sub-div'>
               <label className='sale-bill-label'>discount</label>
-              <p className='sale-bill-values'>{billData.discount}</p>
+              <div className='discount-div'>
+                <input type='number' value={billData.discount} onChange={(e)=>discountHandler(e)} className='sale-bill-discount-input'/><p className='discount-p'>%</p>
+              </div>
             </div>
-            <div className='sale-line'></div>
             <div className='sale-bill-total-sub-div'>
               <label className='sale-bill-label'>Total</label>
               <p className='sale-bill-values'>{billData.bill_total}</p>
+            </div>
+            <div className='sale-line'></div>
+            <div className='sale-bill-total-sub-div'>
+              <label className='sale-bill-label'>Net Total</label>
+              <p className='sale-bill-values'>{billData.net_total}</p>
             </div>
           </div>
           <button className='sale-bill-enter-btn' onClick={Senddata}>Enter</button>
@@ -307,8 +330,8 @@ export default function Sale() {
           <p className='bill-option'>option</p>
         </div>
 
-        
-          {billData.items.length > 0 ? (
+        <div className='bill-items-view'>
+        {billData.items.length > 0 ? (
             billData.items.map((item, index) => (
           
 
@@ -329,6 +352,10 @@ export default function Sale() {
             </div>
             
           )}
+        </div>
+
+        
+
         </div>
       
     </div>

@@ -143,6 +143,7 @@ export default function Supplier() {
                     <p className='supplier-nic'>nic</p>
                     <p className='supplier-action'>option</p>
                 </div>
+                <div className='supplier-view-div-value-main'>
                 {suppliers.map((supplier,index) => {
                     return(
                         <div className='supplier-view-div-value' key={index}>
@@ -166,6 +167,8 @@ export default function Supplier() {
                     )
                 }
                 )}
+                </div>
+                
 
                 </div>
             </div>

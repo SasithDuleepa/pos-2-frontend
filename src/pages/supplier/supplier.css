@@ -14,7 +14,10 @@ height: 100vh;
 .supplier-child-2{
     grid-area: 2 / 1 / 3 / 2;
 }
-
+.supplier-view-div-value-main{
+    height: 87%;
+    overflow-y: scroll;
+}
 
 .supplier-h1{
     font-size: 30px;

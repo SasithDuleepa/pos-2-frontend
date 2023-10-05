@@ -74,20 +74,8 @@ export default function Bills() {
                     <p className='bills-view-header'>method</p>
                     <p className='bills-view-header'>status</p>
                 </div>
-              
-                {/* {bills.map((bill)=>
-                <a href={`/bill_preview/${bill.bill_id}`} onClick={()=>{setStart_date('');setEnd_date("")}} className='bills-view-header-div-value'>
-                    <p className='bills-view-header-value'>{bill.bill_id}</p>
-                    <p className='bills-view-header-value'>{formatDate(bill.bil_date)}</p>
-                    <p className='bills-view-header-value'>{bill.bill_total}</p>
-                    <p className='bills-view-header-value'>{bill.bill_customer}</p>
-                    <p className='bills-view-header-value'>{bill.bill_method}</p>
-                    <p className='bills-view-header-value'>{bill.payment_status}</p>
-                </a>
-                )} */}
-
-
-            {bills.length > 0 ? (
+                <div className='bills-view-container'>
+                {bills.length > 0 ? (
              bills.map((bill, index) => (
                 <a href={`/bill_preview/${bill.bill_id}`} onClick={()=>{setStart_date('');setEnd_date("")}} className='bills-view-header-div-value'>
                 <p className='bills-view-header-value'>{bill.bill_id}</p>
@@ -103,6 +91,11 @@ export default function Bills() {
               <p className='no-bills-p'>No bills found</p>
             </div>
           )}
+                </div>
+
+
+
+
             </div>
             
         </div>

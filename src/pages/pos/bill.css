@@ -19,6 +19,11 @@ height: 100vh;
     grid-area: 3 / 1 / 7 / 6;
     background-color: rgb(255, 255, 255);
 }
+.bill-items-view{
+    height: 89%;
+    background-color: aqua;
+    overflow-y: scroll;
+}
 
 
 .sale-h1{
@@ -85,13 +90,13 @@ height: 100vh;
 }
 
 .sale-bill-add-btn{
-
+    background-color:var(--main-color);
+    color: var(--text-color);
   align-items: center;
-  background-color:var(--accent-color);
+  
   border-radius: 12px;
   box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
   box-sizing: border-box;
-  color: #121212;
   cursor: pointer;
   display: inline-flex;
   flex: 1 1 auto;
@@ -106,7 +111,7 @@ height: 100vh;
   text-align: center;
   text-decoration: none;
   transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
+  letter-spacing: 1px;
   border: 0;
   user-select: none;
   -webkit-user-select: none;
@@ -136,18 +141,35 @@ height: 100vh;
 }
 .sale-bill-enter-btn{
     position: fixed;
-    bottom: 30px;
+    bottom: 20px;
     right: 30px;
     /* border: 1px solid black; */
-    padding: 10px 30px;
+    padding: 10px 25px;
     border-radius: 10px;
-    background-color:var(--accent-color);
+    background-color:var(--main-color);
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .sale-bill-total-sub-div{
     display: flex;
     justify-content: space-between;
     margin: 50px 10px;
+}
+.discount-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80px;
+}
+.sale-bill-discount-input{
+    width: 50px;
+    text-align: center;
+}
+.discount-p{
+    color: var(--text-color);
+    font-size: 25px;
 }
 
 .sale-line{

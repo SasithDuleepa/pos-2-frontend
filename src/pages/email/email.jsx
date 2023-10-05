@@ -110,6 +110,7 @@ export default function Email() {
             <p className="Email-view-header">method</p>
             <p className="Email-view-header">status</p>
           </div>
+          <div className='email-view-container'>
           {bills.length > 0 ? (
             bills.map((bill, index) => (
               <div key={index} className="Email-view-header-div-value">
@@ -131,6 +132,8 @@ export default function Email() {
               <p className='no-bills-p'>No bills found</p>
             </div>
           )}
+          </div>
+          
 
           <div>
             <button className='send-mail-btn' onClick={handleBulkAction}>Send mail</button>
