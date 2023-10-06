@@ -136,12 +136,12 @@ export default function Supplier() {
         <div className='supplier-child-2'>
             <div className='supplier-view-div'>
                 <div className='supplier-view-div-header'>
-                    <p className='supplier-name'>name</p>
-                    <p className='supplier-address'>address</p>
-                    <p className='supplier-contact'>contact</p>
-                    <p className='supplier-email'>email</p>
-                    <p className='supplier-nic'>nic</p>
-                    <p className='supplier-action'>option</p>
+                    <p className='supplier-name'>Name</p>
+                    <p className='supplier-address'>Address</p>
+                    <p className='supplier-contact'>Contact</p>
+                    <p className='supplier-email'>Email</p>
+                    <p className='supplier-nic'>NIC</p>
+                    <p className='supplier-action'>Action</p>
                 </div>
                 <div className='supplier-view-div-value-main'>
                 {suppliers.map((supplier,index) => {

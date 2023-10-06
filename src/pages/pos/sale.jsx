@@ -199,7 +199,7 @@ export default function Sale() {
         net_total: prevData.bill_total - (prevData.bill_total * (prevData.discount / 100)),
     }
     ))
-    },[])
+    },[billData])
 
     //discount
     const discountHandler = (e) => {
@@ -231,13 +231,13 @@ export default function Sale() {
         <h1 className='sale-h1'>Bill</h1>
         <div className='sale-input-div-container-1'>
           <div className='sale-input-div'>
-            <label className='sale-input-label'>bill id</label>
+            <label className='sale-input-label'>Bill Id</label>
             <input className='sale-input' value={billData.bill_id} type='text' />
           </div>
           <div className='sale-input-div'>
-            <label className='sale-input-label'>customer</label>
+            <label className='sale-input-label'>Customer</label>
             <select className='sale-input' onChange={(e) => customerSelectHandler(e)}>
-              <option value=''>Select a customer</option>
+              <option value=''>Select a Customer</option>
               {customers.map((customer, index) => (
                 <option key={index} value={customer.customer_name}>
                   {customer.customer_name}
@@ -247,7 +247,7 @@ export default function Sale() {
             {/* <input className='sale-input' type='text' /> */}
           </div>
           <div className='sale-input-div'>
-            <label className='sale-input-label'>date</label>
+            <label className='sale-input-label'>Date</label>
             <input className='sale-input' type='text' value={billData.date}/>
           </div>
         </div>
@@ -255,7 +255,7 @@ export default function Sale() {
          
           <div className='sale-input-div-item'>
             <div className='sale-input-item-name-label-div'>
-              <label className='sale-input-label'>item</label>
+              <label className='sale-input-label'>Item</label>
               <input className='sale-input' type='text'  onChange={(e) => itemSearchHandler(e)} value={item_name}/>
             </div>
             
@@ -280,12 +280,12 @@ export default function Sale() {
           </div>
           
           <div className='sale-input-div'>
-            <label className='sale-input-label'>qty</label>
+            <label className='sale-input-label'>QTY</label>
             <input className='sale-input' value={qty} onChange={(e) => qtyHandler(e)} type='number' />
           </div>
           <div className='sale-input-div'>
             <button className='sale-bill-add-btn' onClick={BillItemHandler}>
-              add
+              Add
             </button>
           </div>
         </div>
@@ -294,7 +294,7 @@ export default function Sale() {
         <div>
           <div className='sale-bill-div'>
             <div className='sale-bill-total-sub-div'>
-              <label className='sale-bill-label'>payment method</label>
+              <label className='sale-bill-label'>Payment Method</label>
               {/* <p className='sale-bill-values'>{billData.payment_method}</p> */}
               <div className='sale-bill-payment-method-div'>
               <a><img className={oncashClass} src={OnCash}  onClick={Payment_method('on cash')}/></a>
@@ -303,7 +303,7 @@ export default function Sale() {
               
             </div>
             <div className='sale-bill-total-sub-div'>
-              <label className='sale-bill-label'>discount</label>
+              <label className='sale-bill-label'>Discount</label>
               <div className='discount-div'>
                 <input type='number' value={billData.discount} onChange={(e)=>discountHandler(e)} className='sale-bill-discount-input'/><p className='discount-p'>%</p>
               </div>
@@ -323,11 +323,11 @@ export default function Sale() {
       </div>
       <div className='bill-child-3'>
         <div className='bill-head-div'>
-          <p className='bill-item'>item</p>
-          <p className='bill-qty'>qty</p>
-          <p className='bill-price'>price</p>
-          <p className='bill-total'>total</p>
-          <p className='bill-option'>option</p>
+          <p className='bill-item'>Item</p>
+          <p className='bill-qty'>Qty</p>
+          <p className='bill-price'>Price</p>
+          <p className='bill-total'>Total</p>
+          <p className='bill-option'>Option</p>
         </div>
 
         <div className='bill-items-view'>

@@ -21,7 +21,6 @@ height: 100vh;
 }
 .bill-items-view{
     height: 89%;
-    background-color: aqua;
     overflow-y: scroll;
 }
 
@@ -264,6 +263,7 @@ height: 100vh;
 .bill-head-div-values{
     display: flex;
     justify-content: space-around;
+    margin: 2px;
 
     background-color: aliceblue;
     height: 40px;

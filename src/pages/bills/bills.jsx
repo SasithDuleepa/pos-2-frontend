@@ -40,11 +40,11 @@ export default function Bills() {
             <div className='bills-div-main-div'>
             <div className='input-div-main'>
                 <div className='input-div'>
-                    <label className='bill-input-label'>from</label>
+                    <label className='bill-input-label'>From</label>
                     <input type="date" className='bills-input' onChange={(e)=>setStart_date(e.target.value)} value={start_date}/>
                 </div>
                 <div className='input-div'>
-                    <label className='bill-input-label'>to</label>
+                    <label className='bill-input-label'>To</label>
                     <input type="date" className='bills-input' onChange={(e)=>setEnd_date(e.target.value)} value={end_date}/>
                 </div>
                 <div>
@@ -59,7 +59,7 @@ export default function Bills() {
 
 
             <div className='bill-id-div'>
-                <lable className='bill-input-label'>bill id</lable>
+                <lable className='bill-input-label'>Bill Id</lable>
                 <input type='text' className='bills-input' onChange={(e)=>idSearchHandler(e)}/>
             </div>
         </div>

@@ -133,12 +133,12 @@ export default function Customer() {
         <div className='customer-child-2'>
             <div >
                 <div className='customer-view-div-header'>
-                    <p className='customer-name'>name</p>
-                    <p className='customer-address'>address</p>
-                    <p className='customer-contact'>contact</p>
-                    <p className='customer-email'>email</p>
-                    <p className='customer-nic'>nic</p>
-                    <p className='customer-action'>action</p>
+                    <p className='customer-name'>Name</p>
+                    <p className='customer-address'>Address</p>
+                    <p className='customer-contact'>Contact</p>
+                    <p className='customer-email'>Email</p>
+                    <p className='customer-nic'>NIC</p>
+                    <p className='customer-action'>Action</p>
                 </div>
                 <div className='customer-view-container'>
                 {customers.map((customer,index) => {

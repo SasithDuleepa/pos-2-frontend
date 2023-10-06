@@ -30,7 +30,18 @@ export default function Stock() {
         console.log(res.data)
         if(res.data.status === 200 ){
             alert('Stock Added Successfully')
-            // getallstock();
+            getStock();
+            setData({
+                stock_id:'', 
+        stock_item:'', 
+        batch_no:'', 
+        supplier:'',
+        stock_qty:'', 
+        taking_price:'', 
+        selling_price:'', 
+        stock_date:'',
+        current_qty:''
+            })
         }else if(res.data.status === 500){
             alert('Server Error')
         }
@@ -76,6 +87,17 @@ export default function Stock() {
         if(res.data.status === 200 ){
             alert('Stock Updated Successfully')
             getStock();
+            setData({
+                stock_id:'', 
+        stock_item:'', 
+        batch_no:'', 
+        supplier:'',
+        stock_qty:'', 
+        taking_price:'', 
+        selling_price:'', 
+        stock_date:'',
+        current_qty:''
+            })
         }else if(res.data.status === 500){
             alert('Server Error')
         }else{
@@ -97,7 +119,15 @@ export default function Stock() {
         getAllSuppliers();
     
     },[])
-
+    function formatDate(inputDate) {
+        const originalDate = new Date(inputDate);
+        const modifiedDate = new Date(originalDate);
+        modifiedDate.setDate(originalDate.getDate() + 1);
+        const year = modifiedDate.getFullYear();
+        const month = (modifiedDate.getMonth() + 1).toString().padStart(2, '0');
+        const day = modifiedDate.getDate().toString().padStart(2, '0');
+        return `${year}-${month}-${day}`;
+      }
   return (
     <div className='stock-parent'>
     <div className='stock-child-1'>
@@ -139,7 +169,7 @@ export default function Stock() {
             </div>
             {currentQty && 
             <div className='stock-form-div'>
-            <label className='stock-form-label'>current stock</label>
+            <label className='stock-form-label'>Current Stock</label>
             <input  className='stock-form-input' id='current_qty' type="text" value={data.current_qty} onChange={(e)=>changeHandler(e)}/>
             </div>
             }
@@ -156,15 +186,15 @@ export default function Stock() {
     <div className='stock-child-2'>
         <div className='stock-view-div'>
             <div className='stock-view-div-header'>
-                <p className='stock-batchno'>batch no.</p>
-                <p className='stock-item'>item</p>
-                <p className='stock-supplier'>supplier</p>
-                <p className='stock-qty'>qty</p>
-                <p className='stock-date'>available</p>
-                <p className='stock-takingprice'>taking price</p>
-                <p className='stock-sellingprice'>selling price</p>
-                <p className='stock-date'>date</p>
-                <p className='stock-action'>action</p>
+                <p className='stock-batchno'>Batch No.</p>
+                <p className='stock-item'>Item</p>
+                <p className='stock-supplier'>Supplier</p>
+                <p className='stock-qty'>Qty</p>
+                <p className='stock-date'>Available</p>
+                <p className='stock-takingprice'>Taking Price</p>
+                <p className='stock-sellingprice'>Selling Price</p>
+                <p className='stock-date'>Date</p>
+                <p className='stock-action'>Action</p>
             </div>
 
             <div className='stock-view-div-container'>
@@ -178,7 +208,7 @@ export default function Stock() {
                         <p className='stock-qty-value'>{stock.current_qty}</p>
                         <p className='stock-takingprice-value'>{stock.taking_price}</p>
                         <p className='stock-sellingprice-value'>{stock.selling_price}</p>
-                        <p className='stock-date-value'>{stock.stock_date}</p>
+                        <p className='stock-date-value'>{formatDate(stock.stock_date)}</p>
                         <div className='stock-action-value'>
                             <img src={Edite} onClick={editeicon(stock.stock_id,
                                 stock.batch_no
@@ -187,7 +217,8 @@ export default function Stock() {
                                 stock.stock_qty,
                                 stock.taking_price,
                                 stock.selling_price,
-                                stock.stock_date,
+                                formatDate(stock.stock_date),
+                                // stock.stock_date,
                                 stock.current_qty)} className='edite-img'/>
                             <img src={Delete} className='delete-img'/>
                         </div>

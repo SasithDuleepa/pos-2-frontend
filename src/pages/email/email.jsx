@@ -61,7 +61,7 @@ export default function Email() {
         <div className="Email-div-main-div">
           <div className="Email-input-div-main">
             <div className="Email-input-div">
-              <label className="Email-input-label">from</label>
+              <label className="Email-input-label">From</label>
               <input
                 type="date"
                 className="Email-input"
@@ -70,7 +70,7 @@ export default function Email() {
               />
             </div>
             <div className="Email-input-div">
-              <label className="Email-input-label">to</label>
+              <label className="Email-input-label">To</label>
               <input
                 type="date"
                 className="Email-input"
@@ -85,7 +85,7 @@ export default function Email() {
         </div>
 
         <div className="Email-id-div">
-          <label className="Email-input-label">bill id</label>
+          <label className="Email-input-label">Bill Id</label>
           <input type="text" className="Email-input" onChange={(e) => searchHandler2(e)}/>
         </div>
       </div>
